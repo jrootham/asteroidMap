@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date sighted:</strong>
+  <%= @sighting.date_sighted %>
+</p>
+
+<p>
+  <strong>Ra:</strong>
+  <%= @sighting.ra %>
+</p>
+
+<p>
+  <strong>Dec:</strong>
+  <%= @sighting.dec %>
+</p>
+
+<p>
+  <strong>Magn:</strong>
+  <%= @sighting.magn %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @sighting.location %>
+</p>
+
+<p>
+  <strong>Asteroid:</strong>
+  <%= @sighting.asteroid %>
+</p>
+
+<%= link_to 'Edit', edit_sighting_path(@sighting) %> |
+<%= link_to 'Back', sightings_path %>

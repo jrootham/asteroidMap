@@ -1,0 +1,37 @@
+<h1>Listing sightings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date sighted</th>
+      <th>Ra</th>
+      <th>Dec</th>
+      <th>Magn</th>
+      <th>Location</th>
+      <th>Asteroid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sightings.each do |sighting| %>
+      <tr>
+        <td><%= sighting.date_sighted %></td>
+        <td><%= sighting.ra %></td>
+        <td><%= sighting.dec %></td>
+        <td><%= sighting.magn %></td>
+        <td><%= sighting.location %></td>
+        <td><%= sighting.asteroid %></td>
+        <td><%= link_to 'Show', sighting %></td>
+        <td><%= link_to 'Edit', edit_sighting_path(sighting) %></td>
+        <td><%= link_to 'Destroy', sighting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sighting', new_sighting_path %>

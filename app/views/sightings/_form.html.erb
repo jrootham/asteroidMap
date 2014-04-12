@@ -1,0 +1,41 @@
+<%= form_for(@sighting) do |f| %>
+  <% if @sighting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sighting.errors.count, "error") %> prohibited this sighting from being saved:</h2>
+
+      <ul>
+      <% @sighting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_sighted %><br>
+    <%= f.datetime_select :date_sighted %>
+  </div>
+  <div class="field">
+    <%= f.label :ra %><br>
+    <%= f.text_field :ra %>
+  </div>
+  <div class="field">
+    <%= f.label :dec %><br>
+    <%= f.text_field :dec %>
+  </div>
+  <div class="field">
+    <%= f.label :magn %><br>
+    <%= f.text_field :magn %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :asteroid_id %><br>
+    <%= f.text_field :asteroid_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

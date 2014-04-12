@@ -1,0 +1,25 @@
+<%= form_for(@galery) do |f| %>
+  <% if @galery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@galery.errors.count, "error") %> prohibited this galery from being saved:</h2>
+
+      <ul>
+      <% @galery.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_taken %><br>
+    <%= f.datetime_select :date_taken %>
+  </div>
+  <div class="field">
+    <%= f.label :asteroid_id %><br>
+    <%= f.text_field :asteroid_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

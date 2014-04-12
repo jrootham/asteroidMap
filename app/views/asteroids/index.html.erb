@@ -1,0 +1,29 @@
+<h1>Listing asteroids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ref num</th>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asteroids.each do |asteroid| %>
+      <tr>
+        <td><%= asteroid.ref_num %></td>
+        <td><%= asteroid.name %></td>
+        <td><%= link_to 'Show', asteroid %></td>
+        <td><%= link_to 'Edit', edit_asteroid_path(asteroid) %></td>
+        <td><%= link_to 'Destroy', asteroid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asteroid', new_asteroid_path %>

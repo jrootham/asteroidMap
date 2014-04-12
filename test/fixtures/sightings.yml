@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_sighted: 2014-04-12 16:22:52
+  ra: 9.99
+  dec: 9.99
+  magn: MyString
+  location: MyString
+  asteroid_id: 
+
+two:
+  date_sighted: 2014-04-12 16:22:52
+  ra: 9.99
+  dec: 9.99
+  magn: MyString
+  location: MyString
+  asteroid_id: 

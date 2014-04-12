@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ref num:</strong>
+  <%= @asteroid.ref_num %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @asteroid.name %>
+</p>
+
+<%= link_to 'Edit', edit_asteroid_path(@asteroid) %> |
+<%= link_to 'Back', asteroids_path %>
