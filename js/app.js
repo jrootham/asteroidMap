@@ -19,15 +19,17 @@ function initCB(instance) {
 
     var lookAt = ge.createLookAt('');
     ge.getOptions().setMapType(ge.MAP_TYPE_SKY);
-    lookAt.set(-59.65189337195337, -18.799770300376053, 200, ge.ALTITUDE_RELATIVE_TO_GROUND, 0, 0, 36817);
+    //    lookAt.set(-59.65189337195337, -18.799770300376053, 0, ge.ALTITUDE_RELATIVE_TO_GROUND, 0, 0, 36817);
     /*
     
           */
+    $('#container').css('display', 'block');
     // Testing Fly In
 
-    getFlyIn(-44, -434, 1);
-    getFlyIn(-100, -433, 2);
-    getFlyIn(-330, -504, 3);
+    //    getFlyIn(-44, -434, 1);
+    //    getFlyIn(-100, -433, 2);
+    //    getFlyIn(-330, -504, 3);
+    //    getFlyIn(-80, -504, 3);
 
 
 }
@@ -43,6 +45,7 @@ function getFlyIn(numLat, numLng, numMove) {
     console.log(numMove);
     var fts = ge.getOptions().getFlyToSpeed();
     ge.getOptions().setFlyToSpeed(.2); // Slow Down
+
     lookAt = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
     lookAt.set(numLat, numLng, ge.ALTITUDE_RELATIVE_TO_GROUND, 0, 0, 368, ge.getView().setAbstractView(lookAt));
 
@@ -50,9 +53,14 @@ function getFlyIn(numLat, numLng, numMove) {
     ge.getOptions().setFlyToSpeed(oldFlyToSpeed);
 }
 
-function makeFlickrShow(json) {
+
+
+//
+function makeFlickrShow() {
 
 }
 
+function makePoints(numID) {
 
+}
 google.setOnLoadCallback(init);

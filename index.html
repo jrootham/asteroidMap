@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet"/> 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,21 +17,62 @@
     <![endif]-->
   </head>
   <body>
-    <h1></h1>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
     <script src="js/bootstrap.min.js"></script>
-    
-    <div id="canmap" style="width: 100%; height: 100%; border: 1px solid; display: block; position: absolute; top: 0px; left: 0px; ">
+    <script src="https://login.persona.org/include.js"></script>
+    <script src="signon.js"></script>
+    <!-- Map ///////////////////////////////////-->
+    <div id="canmap" style=""></div>
+    <!-- Skeleton -->
+    <div class="divBubbles" 
+             id=""
+             style="display:none">
+             <h1 class="h1AsteroidTitle">Carta</h1>
+             <h2 class="author"></h2>
+             <p>Time seen<time datetime="2014"></time> </p> 
 
+            <div class="slides" style="">
+                
+            </div>
+        </div>
+        <!-- Actual Site Container --> 
+    <div id="container-fluid"> 
+      <header id=""> 
+        <section class="col-md-6"> 
+            <h1>Astromap</h1>
 
+        </section>
+        <section class="col-md-6"> 
+            <nav>
+              <ul>  
+                <li><a href="">Home</a> </li> 
+                <li><a href="">About</a> </li> 
+                <li><a href="">Profile</a></li> 
+                <li><a href="">Explore</a></li> 
+                <li><a href="">Content</a></li> 
+                <li><input id="logon-button" type="image" onclick="navigator.id.request();" alt="Logon" src="email_sign_in_black.png">
+<input id="logoff-button" type="button" onclick="navigator.id.logout();" value="Signoff" style="display: none;"></li>
+              </ul> 
+              <hr class="clear-both"/>
+            </nav>  
+        </section> 
+          <section>
+              <p> 
+                  &nbsp;
+              </p>
+          </section>
+    </header> 
     </div>
     <script type="text/javascript"
       src="js/app.js">
        
     </script>
+
+
+
   </body>
 </html>
