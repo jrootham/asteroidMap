@@ -2,14 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-ready = () ->
-  ge
-  google.load("earth", "1")
-  
-  
+$ ->
   init = () ->
     console.log("Show Map")
-    google.earth.createInstance('canmap', initCB, failureCB)
+    #google.earth.createInstance('canmap', initCB, failureCB)
   
   initCB = (instance) ->
     ge = instance
@@ -43,12 +39,7 @@ ready = () ->
 
   
   makeFlickrShow = (json) ->
-  
-  
-  
-  
-  google.setOnLoadCallback(init)
-  
+    0
 
-$(document).ready(ready)
-$(document).on('page:load', ready)
+  google.load("earth", "1", {"callback": init})
+  
