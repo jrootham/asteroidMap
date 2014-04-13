@@ -1,0 +1,27 @@
+Send key get session
+
+url:config.url/login
+x-www-form-encoded
+json:{'apikey': 'config.key'}
+result:{'status': 'success', 'message': 'authenticated user: ', 'session': 'stuff'}
+
+Send picture and session get job number
+
+url:config.url/upload
+multipart-mime
+'text', 'plain'
+'Content-disposition', 'form-data; name="request-json"'
+json:{'publicly_visible': 'y', 'allow_modifications': 'd', 'session': 'stuff', 'allow_commercial_use': 'c'}
+'octet-stream'
+'Content-disposition','form-data; name="file"; filename="filename"'
+
+Get job numbers
+
+url:config.url/myjobs
+ {"status": "success", "jobs": [267758, 267770, 267757, 267765, 267763]}
+ 
+Send job number get results
+
+config.url/jobs/number/calibration
+{"parity": 1.0, "orientation": -87.84922720718491, "pixscale": 1.7860532400362414, "radius": 0.7727647845191112, "ra": 83.56458711321089, "dec": 21.916974573332396}
+
