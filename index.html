@@ -29,37 +29,9 @@
 
 
     </div>
-    <script type="text/javascript">
-        var ge;
-         google.load("earth", "1");
-
-        
-        function init() {
-          console.log("Show Map");
-          google.earth.createInstance('canmap', initCB, failureCB);
-        }
-
-        function initCB(instance){
-          ge = instance;
-          ge.getWindow().setVisibility(true);
-           // add a navigation control
-          ge.getNavigationControl().setVisibility(ge.VISIBILITY_AUTO);
-
-          var lookAt = ge.createLookAt('');
-          ge.getOptions().setMapType(ge.MAP_TYPE_SKY);
-            lookAt.set(-59.65189337195337, -18.799770300376053, 0, 
-                  ge.ALTITUDE_RELATIVE_TO_GROUND, 0, 0, 36817);
-          /*
-    
-          */
-          ge.getView().setAbstractView(lookAt); 
-        }
-
-        function failureCB(errorCode){
-          console.log(errorCode);
-        }
-
-        google.setOnLoadCallback(init);
+    <script type="text/javascript"
+      src="js/app.js">
+       
     </script>
   </body>
 </html>
