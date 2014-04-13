@@ -7,11 +7,11 @@ $light-grey: #AAACB1;
 
 .starmap {
   height: 600px;
-  width: 75%;
+  width: 73%;
   min-width: 200px;
-  background-color: #f00;
   display: inline-block;
-
+  border: 1px solid;
+  margin-left: 2%;
 }
 
 .starmap-data {

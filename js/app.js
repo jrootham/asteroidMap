@@ -51,6 +51,7 @@ function getFlyIn(numLat, numLng, numMove) {
 
     ge.getView().setAbstractView(lookAt);
     ge.getOptions().setFlyToSpeed(oldFlyToSpeed);
+
 }
 
 
@@ -60,7 +61,28 @@ function makeFlickrShow() {
 
 }
 
-function makePoints(numID) {
-
+function makePoint(data) { //
+    var strNme = "astroidID" + data.id;
+    var strNmeAT = strNme + " .h1AsteroidTitle";
+    var strNmeAuth = strNme + " .author";
+    var strNmeTime = strNme + " time";
+    $('.divBubble').clone().appendTo("body").attr(id, strNme);
+    $(strNmeAT).html(data.name);
+    $(strNmeAuth).html(data.author);
+    $(strNmeTime).attr('datetime', data.time).html(data.time);
+    $(astroidID).css({
+        "position": "absolute",
+        "top": "50%",
+        "left": "50%"
+    });
 }
+
+$.getJSON("", function(data) {
+    loadPoints(data);
+});
+
+$(document).ajaxComplete(function() {
+
+});
+
 google.setOnLoadCallback(init);
