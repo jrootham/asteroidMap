@@ -1,0 +1,24 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$light-grey: #AAACB1;
+
+.starmap {
+  height: 600px;
+  width: 75%;
+  min-width: 200px;
+  background-color: #f00;
+  display: inline-block;
+
+}
+
+.starmap-data {
+  height: 600px;
+  width: 20%;
+  min-width: 200px;
+  background-color: $light-grey;
+  display: inline-block;
+  margin: 0 2% 0 2%;
+}

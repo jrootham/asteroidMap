@@ -10,5 +10,11 @@
   <%= @galery.asteroid %>
 </p>
 
+<p>
+  <b>Image:</b>
+  <%= image_tag @galery.image.url %>
+</p>
+
+
 <%= link_to 'Edit', edit_galery_path(@galery) %> |
 <%= link_to 'Back', galeries_path %>

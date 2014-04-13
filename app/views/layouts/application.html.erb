@@ -8,6 +8,28 @@
 </head>
 <body>
 
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <%= link_to "AstroWatch", root_path, class:"navbar-brand" %>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li>
+        <%= link_to "About", static_pages_about_path %>
+      </li>
+      <li>
+        <%= link_to "Profile", "#"%>
+      </li>
+      <li>
+        <%= link_to "Data", sightings_path %>
+      </li>
+      <li>
+        <%= link_to "Contact", static_pages_contact_path %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <%= yield %>
 
 </body>
